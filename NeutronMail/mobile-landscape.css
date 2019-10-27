@@ -22,6 +22,10 @@
 .face-headings .sub-heading {
   font-size: 28px;
 }
+.face-block-buttons {
+  background: none;
+  -webkit-mask-image: none;
+}
 .create-button {
   margin-left: 0;
 }
