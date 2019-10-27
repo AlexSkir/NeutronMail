@@ -1,0 +1,161 @@
+.header-nav-langs {
+  width: auto;
+}
+.header-lang-list {
+  position: absolute;
+  top: 140px;
+}
+.header-lang-item {
+  font-size: 18px;
+  padding-right: 10px;
+}
+.face-block .central-block {
+  width: 100%;
+  align-items: center;
+}
+.face-headings {
+  width: 70%;
+}
+.face-headings .main-heading {
+  font-size: 32px;
+}
+.face-headings .sub-heading {
+  font-size: 28px;
+}
+.create-button {
+  margin-left: 0;
+}
+.face-block .google-link {
+  margin-right: 0;
+}
+.left-block, 
+.about-block .central-block, 
+.right-block {
+  width: 100%;
+}
+.about-block .desciption {
+  width: 100%;
+  display: block;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  word-break: break-word;
+  text-align: justify;
+}
+.security-block .central-block,
+.download-block .download-quote,
+.download-block .download-info,
+.sponsors-block {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+.security-block .main-heading {
+  font-size: 32px;
+}
+.security-block .description {
+  word-break: break-word;
+}
+.download-block {
+  height: 600px;
+}
+.download-block .central-block {
+  margin-right: 0;
+}
+.download-block .download-quote {
+  margin-right: 0;
+  font-size: 18px;
+}
+.download-block .download-quote::before,
+.download-block .download-quote::after,
+.download-block .download-quote-name::after {
+  content: none;
+}
+.sponsors-block .main-heading {
+  font-size: 30px;
+}
+.sponsors-block .sponsors-links {
+  flex-direction: column;
+  align-items: center;
+}
+a.create-button.shadow.sponsors-links-upgrade {
+  margin: 0 0 30px 0;
+}
+.sponsors-block .description {
+  margin-top: 50px;
+}
+.footer-links {
+  position: relative;
+}
+.footer-company-links, 
+.footer-legal-links, 
+.footer-neutronmail-links {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 100%;
+  padding: 0 10%;
+  background: rgb(249, 249, 249);
+  box-sizing: border-box;
+  border-top: 2px ridge lightgray;
+  border-bottom: 2px ridge lightgray;
+  z-index: 0;
+}
+.footer-links .footer-links-list {
+  padding: 20px 0;
+}
+.footer-links .footer-list-item:not(.footer-list-heading) {
+  width: 100%;
+  text-align: left;
+}
+.footer-links .footer-list-heading {
+  position: absolute;
+  top: -39px;
+  width: 33%;
+  padding: 0;
+  color: rgba(149, 149, 149, 255);
+  font-weight: normal;
+  text-align: center;
+  background: rgb(249, 249, 249);
+  cursor: pointer;
+}
+.footer-links .footer-company-links .footer-list-heading {
+  left: 10px;
+  width: 33%;
+}
+.footer-links .footer-legal-links .footer-list-heading {
+  left: 34%;
+}
+.footer-links .footer-neutronmail-links .footer-list-heading {
+  right: 5px;
+}
+.footer-links .footer-legal-links .footer-list-item:not(.footer-list-heading) {
+  text-align: center;
+}
+.footer-links .footer-legal-links .footer-list-item:not(.footer-list-heading)::before {
+  content: none;
+}
+.footer-links .footer-neutronmail-links .footer-list-item:not(.footer-list-heading) {
+  text-align: right;
+}
+.footer-links .footer-neutronmail-links .footer-list-item:not(.footer-list-heading)::before {
+  float: right;
+}
+.footer-links .footer-list-item:not(.footer-list-heading)::before {
+  float: left;
+  margin-right: 10px;
+  top: 12px;
+}
+.footer-nav {
+  width: fit-content;
+  margin-top: 300px;
+}
+.footer-nav-list {
+  flex-direction: column;
+}
+.bold-text {
+  color: rgba(92, 92, 92, 255)!important;
+  font-weight: bold!important;
+}
+.z-indexed {
+  z-index: 10;
+}

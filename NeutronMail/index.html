@@ -1,795 +1,884 @@
-
-
 <!DOCTYPE html>
-<html >
-<head>    
-    <meta name="title-en" content=" NeutronMail English Language" id="title-en">
-    <meta name="title-fr" content="NeutronMail Langue Française" id="title-fr">
-    <meta name="title-it" content="NeutronMail Lingua Italiana" id="title-it">
-    <meta name="title-pl" content="NeutronMail Język Polski" id="title-pl">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="reset.css" type="text/css">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" media="screen and (max-width: 600px)" href="mobile.css"/>
-    <link rel="stylesheet" media="screen and (min-width: 600px) and (max-width: 1000px)" href="tablet_portret.css"/>
-    <link rel="stylesheet" media="screen and (min-width: 1000px) and (max-width: 1400px)" href="tablet_landscape.css"/>
-    <link rel="stylesheet" media="screen and (min-width: 1400px) and (max-width: 1800px)" href="laptop.css"/>    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>NeutronMail</title>    
-    
+<html>
+
+<head>
+  <meta name="title-en" content=" NeutronMail English Language" id="title-en">
+  <meta name="title-fr" content="NeutronMail Langue Française" id="title-fr">
+  <meta name="title-it" content="NeutronMail Lingua Italiana" id="title-it">
+  <meta name="title-pl" content="NeutronMail Język Polski" id="title-pl">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="reset.css" type="text/css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="locale-style.css">
+  <link rel="stylesheet" href="large-screen.css">
+  <link rel="stylesheet" media="all and (max-width: 1350px)" href="laptop.css">
+  <link rel="stylesheet" media="all and (max-width: 1000px)" href="tablet.css">
+  <link rel="stylesheet" media="all and (max-width: 780px)" href="mobile-landscape.css">
+  <link rel="stylesheet" media="all and (max-width: 420px)" href="mobile-portret.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>NeutronMail</title>
+  <script>
+    function isActiveMenu() {
+      const menu = document.getElementById('drop-down-menu');
+      if (menu.classList.contains('active-block')) {
+        menu.classList.remove('active-block');
+      } else {
+        menu.classList.add('active-block');
+      }
+    }
+    function isActiveFooter(arg) {
+      if (arg) {
+        const lang = document.getElementsByTagName('body')[0].classList[0]
+        const block = document.getElementsByClassName(lang)[1].getElementsByClassName(arg)[0];
+        const heading = document.getElementById(`${lang}-${arg}`);
+        let zblocks = document.getElementsByClassName('z-indexed');
+        let boldtexts = document.getElementsByClassName('bold-text');
+        if (zblocks.length > 0) {
+          while (zblocks.length > 0) {
+            zblocks[0].classList.remove('z-indexed');
+            zblocks = document.getElementsByClassName('z-indexed');
+          }
+        }
+        if (boldtexts.length > 0) {
+          while (boldtexts.length > 0) {
+            boldtexts[0].classList.remove('bold-text');
+            boldtexts = document.getElementsByClassName('bold-text');
+          }
+        }
+        block.classList.add('z-indexed');
+        heading.classList.add('bold-text');
+      }
+    }
+  </script>
 </head>
+
 <body class="en">
-    
-    <div class="container">
-        
-        <header>
-            <nav class="langs">  
-                <h1>neutron<span>Mail</span></h1>
-                <ul>
-                    <li><span class="lang-switcher lang-switcher--en" id="switcher-en">English</span></li>
-                    <li><span class="unselectable">/</span></li>
-                    <li><span class="lang-switcher lang-switcher--fr" id="switcher-fr">French</span></li>
-                    <li><span class="unselectable">/</span></li>
-                    <li><span class="lang-switcher lang-switcher--it" id="switcher-it">Italian</span></li>
-                    <li><span class="unselectable">/</span></li>
-                    <li><span class="lang-switcher lang-switcher--pl" id="switcher-pl">Polish</span></li>
-                </ul>
-            </nav>            
-            <nav class="navigation">                  
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#security">Security</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="https://www.neutronmail.com/support">Support</a></li>
-                    <li><a href="#donate">Donate</a></li>                    
-                </ul>
-                <div class="login">
-                    <div><i class="fas fa-sign-in-alt"></i>   <a href="#">Log in</a></div>
-                    <div class="shadow"><a href="#">Sign up</a></div>
-                </div>               
-            </nav> 
-            
-        </header>
-        <div class="en" lang="en">
-            <section id="face">
-                <div class="block">
-                    <div>
-                        <h2>Secure Email Communication</h2>
-                        <h3>Based in <span>Somewhere</span></h3>
-                    </div> 
-                    <div class="buttons">      
-                        <div class="create shadow"><a href="#" target="_blank">Create account</a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-google-play"></i></a></div>
-                    </div>                
-                </div>
-                <div class="social"> 
-                    <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </div>
-            </section>
-            
-            <section id="about">
-                <div class="first">    
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Swiss Privacy</h3>
-                    <h4>Data Security and Neutrality</h4>
-                    
-                    <p>
-                        NeutronMail is incorporated in Somewhere and all our serv-ers are located in Switzerland. 
-                        This means all user data is protected by strict Swiss privacy laws.
-                    </p>                  
-                </div>
-                <div class="second">
-                    <i class="fas fa-lock"></i>
-                    <h3>Double Encryption</h3>
-                    <h4>Automatic Email Security</h4>
-                    <p>
-                        All emails are secured automatically with end-to-end encryption. 
-                        This means even we cannot decrypt and read your emails. 
-                        As a result, your encrypted emails cannot <br> be shared with third parties.
-                    </p>
-                </div>
-                <div class="third">
-                    <i class="fas fa-key"></i>
-                    <h3>Anonymous Email</h3>
-                    <h4>Protect Your Privacy</h4>
-                    <p>
-                        No personal information is required to create your secure email account. 
-                        By default, we do not keep any IP logs which can be linked to your anonymous 
-                        email account. Your privacy comes first.
-                    </p>
-                </div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>            
-            </section>
-            <section id="security">
-                <div>
-                    <h2>Physical Security</h2>
-                    <p>
-                        NeutronMail's infrastructure resides in Europe's <span>most secure</span> datacenter,
-                        underneath 1000 meters of solid rock.
-                    </p>
-                </div> 
-                <div class="shape"></div>           
-            </section>
-            
-            <div class="learn">
-                <a href="#">Learn more about our security features</a>            
-            </div>
-            
-            <div class="picture">
-                <img src="assets/images/in_world.png">
-            </div>
-            
-            <section id="download">
-                <div></div>
-                <div></div>
-                <div></div>
-                
-                <p>
-                    A new email service being developed by a group
-                    from MIT and CERN promises to bring secure,
-                    encrypted email to the masses and keep sensitive
-                    information away from prying eyes.  
-                    <br> 
-                    <span>— Boston Herald</span> 
-                </p>
-                <h2>Any device, anywhere</h2>
-                <p>
-                    The NeutronMail inbox is optimized for productivity. 
-                    Each detail within our secure email service is optimized to help you better read, 
-                    organize, and send email.
-                </p>
-                <img src="assets/images/download1.png" alt="Download on the App Store">
-                <img src="assets/images/download2.png" alt="Get it on Google Play">
-                <img src="assets/images/download_image.png">             
-            </section>
-            
-            <section id="sponsors">
-                <h3>Privacy is a fundamental human right.</h3>
-                <h4>Your support helps us to protect privacy world-wide.</h4>
-                <a href="#" target="_blank" class="create shadow"><i class="fas fa-cloud-upload-alt"></i>Upgrade to Paid Plan</a>
-                <a href="#" target="_blank" class="shadow" id="donate"><i class="fas fa-dollar-sign"></i>Donate</a>
-                <p>Those, who help us secure your privacy</p>
-                <img src="assets/images/sponsors.png" alt="sponsors">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-            </section>
-            
-            <footer>
-                <section id="links">
-                    <div >
-                        <p>
-                            General: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
-                            Media: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
-                            Security: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
-                        </p>
-                        <p>        
-                            For support inquiries, please visit
-                            <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
-                        </p> 
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Company</li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="https://www.neutronmail.com/support">Support</a></li>
-                            <li><a href="#donate">Donate</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Legal</li>
-                            <li><a href="#">Imprint</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Transparency Report</a></li>
-                            <li><a href="#">Report Abuse</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>NeutronMail</li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Press/Media Kit</a></li>
-                            <li><a href="#">Onion Site</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                </section>
-                
-                <nav>
-                    <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="#" target="_blank">Feedback Forum</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
-                    </ul>                         
-                </nav>
-                <div class="copyright">© 2017 Neutron Technologies AG. All Rights Reserved.</div>
-            </footer>
+  <div class="container">
+    <header class="header">
+      <nav class="header-nav-langs">
+        <div class="nav-button-menu">
+          <span class="font-awesome-wrapper" onclick="isActiveMenu()"><i class="fas fa-bars"></i></span>
+          <h1 class="header-heading">neutron<span class="header-heading-colored">Mail</span></h1>
         </div>
-        
-        <div class="fr" lang="fr">
-            
-            <section id="face">
-                <div class="block">
-                    <div>
-                        <h2>Communication sécurisée par courrier électronique</h2>
-                        <h3>Based in <span>Somewhere</span></h3>
-                    </div> 
-                    <div class="buttons">      
-                        <div class="create shadow"><a href="#" target="_blank">Create account</a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-google-play"></i></a></div>
-                    </div>                
-                </div>
-                <div class="social"> 
-                    <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </div>
-            </section>
-            
-            <section id="about">
-                <div class="first">    
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Swiss Privacy</h3>
-                    <h4>Data Security and Neutrality</h4>
-                    
-                    <p>
-                        NeutronMail is incorporated in Somewhere and all our serv-ers are located in Switzerland. 
-                        This means all user data is protected by strict Swiss privacy laws.
-                    </p>                  
-                </div>
-                <div class="second">
-                    <i class="fas fa-lock"></i>
-                    <h3>Double Encryption</h3>
-                    <h4>Automatic Email Security</h4>
-                    <p>
-                        All emails are secured automatically with end-to-end encryption. 
-                        This means even we cannot decrypt and read your emails. 
-                        As a result, your encrypted emails cannot <br> be shared with third parties.
-                    </p>
-                </div>
-                <div class="third">
-                    <i class="fas fa-key"></i>
-                    <h3>Anonymous Email</h3>
-                    <h4>Protect Your Privacy</h4>
-                    <p>
-                        No personal information is required to create your secure email account. 
-                        By default, we do not keep any IP logs which can be linked to your anonymous 
-                        email account. Your privacy comes first.
-                    </p>
-                </div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>            
-            </section>
-            <section id="security">
-                <div>
-                    <h2>Physical Security</h2>
-                    <p>
-                        NeutronMail's infrastructure resides in Europe's <span>most secure</span> datacenter,
-                        underneath 1000 meters of solid rock.
-                    </p>
-                </div> 
-                <div class="shape"></div>           
-            </section>
-            
-            <div class="learn">
-                <a href="#">Learn more about our security features</a>            
-            </div>
-            
-            <div class="picture">
-                <img src="assets/images/in_world.png">
-            </div>
-            
-            <section id="download">
-                <div></div>
-                <div></div>
-                <div></div>
-                
-                <p>
-                    A new email service being developed by a group
-                    from MIT and CERN promises to bring secure,
-                    encrypted email to the masses and keep sensitive
-                    information away from prying eyes.  
-                    <br> 
-                    <span>— Boston Herald</span> 
-                </p>
-                <h2>Any device, anywhere</h2>
-                <p>
-                    The NeutronMail inbox is optimized for productivity. 
-                    Each detail within our secure email service is optimized to help you better read, 
-                    organize, and send email.
-                </p>
-                <img src="assets/images/download1.png" alt="Download on the App Store">
-                <img src="assets/images/download2.png" alt="Get it on Google Play">
-                <img src="assets/images/download_image.png">             
-            </section>
-            
-            <section id="sponsors">
-                <h3>Privacy is a fundamental human right.</h3>
-                <h4>Your support helps us to protect privacy world-wide.</h4>
-                <a href="#" target="_blank" class="create shadow"><i class="fas fa-cloud-upload-alt"></i>Upgrade to Paid Plan</a>
-                <a href="#" target="_blank" class="shadow" id="donate"><i class="fas fa-dollar-sign"></i>Donate</a>
-                <p>Those, who help us secure your privacy</p>
-                <img src="assets/images/sponsors.png" alt="sponsors">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-            </section>
-            
-            <footer>
-                <section id="links">
-                    <div >
-                        <p>
-                            General: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
-                            Media: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
-                            Security: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
-                        </p>
-                        <p>        
-                            For support inquiries, please visit
-                            <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
-                        </p> 
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Company</li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="https://www.neutronmail.com/support">Support</a></li>
-                            <li><a href="#donate">Donate</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Legal</li>
-                            <li><a href="#">Imprint</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Transparency Report</a></li>
-                            <li><a href="#">Report Abuse</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>NeutronMail</li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Press/Media Kit</a></li>
-                            <li><a href="#">Onion Site</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                </section>
-                
-                <nav>
-                    <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="#" target="_blank">Feedback Forum</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
-                    </ul>                         
-                </nav>
-                <div class="copyright">© 2017 Neutron Technologies AG. All Rights Reserved.</div>
-            </footer>
+        <ul class="header-lang-list">
+          <li class="header-lang-item">
+            <span class="lang-switcher lang-switcher--en" id="switcher-en">English</span>
+          </li>
+          <li class="header-lang-item"><span class="unselectable">/</span></li>
+          <li class="header-lang-item">
+            <span class="lang-switcher lang-switcher--fr" id="switcher-fr">French</span>
+          </li>
+          <li class="header-lang-item"><span class="unselectable">/</span></li>
+          <li class="header-lang-item">
+            <span class="lang-switcher lang-switcher--it" id="switcher-it">Italian</span>
+          </li>
+          <li class="header-lang-item"><span class="unselectable">/</span></li>
+          <li class="header-lang-item">
+            <span class="lang-switcher lang-switcher--pl" id="switcher-pl">Polish</span>
+          </li>
+        </ul>
+      </nav>
+      <nav class="header-nav-ancors">
+        <ul class="nav-ancors-list">
+          <li class="nav-ancor-item"><a href="#about">About</a></li>
+          <li class="nav-ancor-item"><a href="#security">Security</a></li>
+          <li class="nav-ancor-item"><a href="#">Blog</a></li>
+          <li class="nav-ancor-item"><a href="#">Careers</a></li>
+          <li class="nav-ancor-item"><a href="https://www.neutronmail.com/support">Support</a></li>
+          <li class="nav-ancor-item"><a href="#donate">Donate</a></li>
+        </ul>
+        <div class="login-buttons-block">
+          <div class="login-button"><i class="fas fa-sign-in-alt"></i> <a href="#">Log in</a></div>
+          <div class="signup-button shadow"><a href="#">Sign up</a></div>
         </div>
-        
-        <div class="it" lang="it">
-            
-            
-            <section id="face">
-                <div class="block">
-                    <div>
-                        <h2>Comunicazione E-mail Sicura</h2>
-                        <h3>Based in <span>Somewhere</span></h3>
-                    </div> 
-                    <div class="buttons">      
-                        <div class="create shadow"><a href="#" target="_blank">Create account</a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-google-play"></i></a></div>
-                    </div>                
-                </div>
-                <div class="social"> 
-                    <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </div>
-            </section>
-            
-            <section id="about">
-                <div class="first">    
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Swiss Privacy</h3>
-                    <h4>Data Security and Neutrality</h4>
-                    
-                    <p>
-                        NeutronMail is incorporated in Somewhere and all our serv-ers are located in Switzerland. 
-                        This means all user data is protected by strict Swiss privacy laws.
-                    </p>                  
-                </div>
-                <div class="second">
-                    <i class="fas fa-lock"></i>
-                    <h3>Double Encryption</h3>
-                    <h4>Automatic Email Security</h4>
-                    <p>
-                        All emails are secured automatically with end-to-end encryption. 
-                        This means even we cannot decrypt and read your emails. 
-                        As a result, your encrypted emails cannot <br> be shared with third parties.
-                    </p>
-                </div>
-                <div class="third">
-                    <i class="fas fa-key"></i>
-                    <h3>Anonymous Email</h3>
-                    <h4>Protect Your Privacy</h4>
-                    <p>
-                        No personal information is required to create your secure email account. 
-                        By default, we do not keep any IP logs which can be linked to your anonymous 
-                        email account. Your privacy comes first.
-                    </p>
-                </div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>            
-            </section>
-            <section id="security">
-                <div>
-                    <h2>Physical Security</h2>
-                    <p>
-                        NeutronMail's infrastructure resides in Europe's <span>most secure</span> datacenter,
-                        underneath 1000 meters of solid rock.
-                    </p>
-                </div> 
-                <div class="shape"></div>           
-            </section>
-            
-            <div class="learn">
-                <a href="#">Learn more about our security features</a>            
-            </div>
-            
-            <div class="picture">
-                <img src="assets/images/in_world.png">
-            </div>
-            
-            <section id="download">
-                <div></div>
-                <div></div>
-                <div></div>
-                
-                <p>
-                    A new email service being developed by a group
-                    from MIT and CERN promises to bring secure,
-                    encrypted email to the masses and keep sensitive
-                    information away from prying eyes.  
-                    <br> 
-                    <span>— Boston Herald</span> 
-                </p>
-                <h2>Any device, anywhere</h2>
-                <p>
-                    The NeutronMail inbox is optimized for productivity. 
-                    Each detail within our secure email service is optimized to help you better read, 
-                    organize, and send email.
-                </p>
-                <img src="assets/images/download1.png" alt="Download on the App Store">
-                <img src="assets/images/download2.png" alt="Get it on Google Play">
-                <img src="assets/images/download_image.png">             
-            </section>
-            
-            <section id="sponsors">
-                <h3>Privacy is a fundamental human right.</h3>
-                <h4>Your support helps us to protect privacy world-wide.</h4>
-                <a href="#" target="_blank" class="create shadow"><i class="fas fa-cloud-upload-alt"></i>Upgrade to Paid Plan</a>
-                <a href="#" target="_blank" class="shadow" id="donate"><i class="fas fa-dollar-sign"></i>Donate</a>
-                <p>Those, who help us secure your privacy</p>
-                <img src="assets/images/sponsors.png" alt="sponsors">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-            </section>
-            
-            <footer>
-                <section id="links">
-                    <div >
-                        <p>
-                            General: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
-                            Media: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
-                            Security: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
-                        </p>
-                        <p>        
-                            For support inquiries, please visit
-                            <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
-                        </p> 
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Company</li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="https://www.neutronmail.com/support">Support</a></li>
-                            <li><a href="#donate">Donate</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Legal</li>
-                            <li><a href="#">Imprint</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Transparency Report</a></li>
-                            <li><a href="#">Report Abuse</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>NeutronMail</li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Press/Media Kit</a></li>
-                            <li><a href="#">Onion Site</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                </section>
-                
-                <nav>
-                    <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="#" target="_blank">Feedback Forum</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
-                    </ul>                         
-                </nav>
-                <div class="copyright">© 2017 Neutron Technologies AG. All Rights Reserved.</div>
-            </footer>
-        </div>
-        
-        <div class="pl" lang="pl">
-            
-            
-            <section id="face">
-                <div class="block">
-                    <div>
-                        <h2>Bezpieczna Komunikacja E-mailowa</h2>
-                        <h3>Based in <span>Somewhere</span></h3>
-                    </div> 
-                    <div class="buttons">      
-                        <div class="create shadow"><a href="#" target="_blank">Create account</a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
-                        <div><a href="#" target="_blank"><i class="fab fa-google-play"></i></a></div>
-                    </div>                
-                </div>
-                <div class="social"> 
-                    <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
-                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </div>
-            </section>
-            
-            <section id="about">
-                <div class="first">    
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Swiss Privacy</h3>
-                    <h4>Data Security and Neutrality</h4>
-                    
-                    <p>
-                        NeutronMail is incorporated in Somewhere and all our serv-ers are located in Switzerland. 
-                        This means all user data is protected by strict Swiss privacy laws.
-                    </p>                  
-                </div>
-                <div class="second">
-                    <i class="fas fa-lock"></i>
-                    <h3>Double Encryption</h3>
-                    <h4>Automatic Email Security</h4>
-                    <p>
-                        All emails are secured automatically with end-to-end encryption. 
-                        This means even we cannot decrypt and read your emails. 
-                        As a result, your encrypted emails cannot <br> be shared with third parties.
-                    </p>
-                </div>
-                <div class="third">
-                    <i class="fas fa-key"></i>
-                    <h3>Anonymous Email</h3>
-                    <h4>Protect Your Privacy</h4>
-                    <p>
-                        No personal information is required to create your secure email account. 
-                        By default, we do not keep any IP logs which can be linked to your anonymous 
-                        email account. Your privacy comes first.
-                    </p>
-                </div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>            
-            </section>
-            <section id="security">
-                <div>
-                    <h2>Physical Security</h2>
-                    <p>
-                        NeutronMail's infrastructure resides in Europe's <span>most secure</span> datacenter,
-                        underneath 1000 meters of solid rock.
-                    </p>
-                </div> 
-                <div class="shape"></div>           
-            </section>
-            
-            <div class="learn">
-                <a href="#">Learn more about our security features</a>            
-            </div>
-            
-            <div class="picture">
-                <img src="assets/images/in_world.png">
-            </div>
-            
-            <section id="download">
-                <div></div>
-                <div></div>
-                <div></div>
-                
-                <p>
-                    A new email service being developed by a group
-                    from MIT and CERN promises to bring secure,
-                    encrypted email to the masses and keep sensitive
-                    information away from prying eyes.  
-                    <br> 
-                    <span>— Boston Herald</span> 
-                </p>
-                <h2>Any device, anywhere</h2>
-                <p>
-                    The NeutronMail inbox is optimized for productivity. 
-                    Each detail within our secure email service is optimized to help you better read, 
-                    organize, and send email.
-                </p>
-                <img src="assets/images/download1.png" alt="Download on the App Store">
-                <img src="assets/images/download2.png" alt="Get it on Google Play">
-                <img src="assets/images/download_image.png">             
-            </section>
-            
-            <section id="sponsors">
-                <h3>Privacy is a fundamental human right.</h3>
-                <h4>Your support helps us to protect privacy world-wide.</h4>
-                <a href="#" target="_blank" class="create shadow"><i class="fas fa-cloud-upload-alt"></i>Upgrade to Paid Plan</a>
-                <a href="#" target="_blank" class="shadow" id="donate"><i class="fas fa-dollar-sign"></i>Donate</a>
-                <p>Those, who help us secure your privacy</p>
-                <img src="assets/images/sponsors.png" alt="sponsors">
-                <div class="shape"></div>
-                <div class="shape"></div>
-                <div class="shape"></div>
-            </section>
-            
-            <footer>
-                <section id="links">
-                    <div >
-                        <p>
-                            General: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
-                            Media: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
-                            Security: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
-                        </p>
-                        <p>        
-                            For support inquiries, please visit
-                            <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
-                        </p> 
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Company</li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="https://www.neutronmail.com/support">Support</a></li>
-                            <li><a href="#donate">Donate</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>Legal</li>
-                            <li><a href="#">Imprint</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Transparency Report</a></li>
-                            <li><a href="#">Report Abuse</a></li>
-                        </ul>
-                    </div>
-                    <div> 
-                        <ul>
-                            <li>NeutronMail</li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Security</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li><a href="#">Press/Media Kit</a></li>
-                            <li><a href="#">Onion Site</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="shape"></div>
-                    <div class="shape"></div>
-                </section>
-                
-                <nav>
-                    <ul>
-                        <li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="#" target="_blank">Feedback Forum</a></li>
-                        <li><span class="unselectable">/</span></li>
-                        <li><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
-                    </ul>                         
-                </nav>
-                <div class="copyright">© 2017 Neutron Technologies AG. All Rights Reserved.</div>
-            </footer>
-        </div>
+      </nav>
+    </header>
+    <div class="drop-down-ancors-block" id="drop-down-menu">
+      <ul class="nav-ancors-slide">
+        <li class="ancors-slide-item"><a href="#about">About</a></li>
+        <li class="ancors-slide-item"><a href="#security">Security</a></li>
+        <li class="ancors-slide-item"><a href="#">Blog</a></li>
+        <li class="ancors-slide-item"><a href="#">Careers</a></li>
+        <li class="ancors-slide-item"><a href="https://www.neutronmail.com/support">Support</a></li>
+        <li class="ancors-slide-item"><a href="#donate">Donate</a></li>
+      </ul>
     </div>
-    <script>
-        (function(){
-            var body = document.getElementsByTagName('body')[0];          
-            var switcherEN = document.getElementById('switcher-en');
-            var switcherFR = document.getElementById('switcher-fr');
-            var switcherIT = document.getElementById('switcher-it');
-            var switcherPL = document.getElementById('switcher-pl');
-            
-            // titles
-            var titleEN = document.getElementById('title-en');
-            var titleFR = document.getElementById('title-fr');
-            var titleIT = document.getElementById('title-it');
-            var titlePL = document.getElementById('title-pl');
-            var title = {
-                en: titleEN.getAttribute('content'),
-                fr: titleFR.getAttribute('content'),
-                it: titleIT.getAttribute('content'),
-                pl: titlePL.getAttribute('content')
-            }
-            
-            var switchLang = function() {
-                var lang = this.id
-                lang = lang.replace('switcher-', '');                
-                body.className = lang;                
-                document.title = title[lang];
-            }
-            
-            switcherEN.onclick = switchLang;
-            switcherFR.onclick = switchLang;
-            switcherIT.onclick = switchLang;
-            switcherPL.onclick = switchLang;
-        })();
-    </script>
-    </body>
-    </html>
+
+    <div class="en" lang="en">
+      <section id="face" class="face-block">
+        <div class="central-block">
+          <div class="face-headings">
+            <h2 class="main-heading">Secure Email Communication</h2>
+            <h3 class="sub-heading">Based in <span class="colored-red">Somewhere</span></h3>
+          </div>
+          <div class="face-block-buttons">
+            <div class="create-button shadow"><a href="#" target="_blank">Create account</a></div>
+            <div class="apple-link round-button"><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
+            <div class="google-link round-button"><a href="#" target="_blank"><i class="fab fa-google-play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="social">
+          <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </section>
+
+      <section id="about" class="about-block">
+        <div class="left-block">
+          <i class="fas fa-shield-alt"></i>
+          <h3 class="main-heading">Swiss Privacy</h3>
+          <h4 class="sub-heading">Data Security and Neutrality</h4>
+          <p class="desciption">
+            NeutronMail is incorporated in Somewhere and all our serv-ers are located in Switzerland. This means all
+            user data is protected by strict Swiss privacy laws.
+          </p>
+        </div>
+        <div class="central-block">
+          <i class="fas fa-lock"></i>
+          <h3 class="main-heading">Double Encryption</h3>
+          <h4 class="sub-heading">Automatic Email Security</h4>
+          <p class="desciption">
+            All emails are secured automatically with end-to-end encryption. This means even we cannot decrypt and read
+            your emails. As a result, your encrypted emails cannot be shared with third parties.
+          </p>
+        </div>
+        <div class="right-block">
+          <i class="fas fa-key"></i>
+          <h3 class="main-heading">Anonymous Email</h3>
+          <h4 class="sub-heading">Protect Your Privacy</h4>
+          <p class="desciption">
+            No personal information is required to create your secure email account. By default, we do not keep any IP
+            logs which can be linked to your anonymous email account. Your privacy comes first.
+          </p>
+        </div>
+      </section>
+
+      <section id="security" class="security-block">
+        <div class="central-block">
+          <h2 class="main-heading">Physical Security</h2>
+          <p class="description">
+            NeutronMail's infrastructure resides in Europe's <span class="colored-red">most secure</span> datacenter,
+            underneath 1000 meters of solid rock.
+          </p>
+        </div>
+        <a href="#" class="learn-more-button">
+          <span class="link-text">Learn more about our security features</span>
+        </a>
+        <div class="our-users-block">
+          <img class="our-users-image" src="assets/images/in_world.png">
+        </div>
+      </section>
+
+      <section id="download" class="download-block">
+        <div class="download-quote">
+          A new email service being developed by a group
+          from MIT and CERN promises to bring secure,
+          encrypted email to the masses and keep sensitive
+          information away from prying eyes.
+          <br>
+          <span class="download-quote-name">— Boston Herald</span>
+        </div>
+        <div class="central-block">
+          <h2 class="download-heading">Any device, anywhere</h2>
+          <div class="download-info">
+            The NeutronMail inbox is optimized for productivity.
+            Each detail within our secure email service is optimized to help you better read,
+            organize, and send email.
+          </div>
+          <div class="download-links">
+            <a class="download-appstore link" href="https://www.apple.com/ru/ios/app-store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download1.png" alt="Download on the App Store">
+            </a>
+            <a class="download-google link" href="https://play.google.com/store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download2.png" alt="Get it on Google Play">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsors" class="sponsors-block">
+        <h3 class="main-heading">Privacy is a fundamental human right.</h3>
+        <h4 class="sub-heading">Your support helps us to protect privacy world-wide.</h4>
+        <div class="sponsors-links">
+          <a href="#" target="_blank" class="create-button shadow sponsors-links-upgrade">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Upgrade to Paid Plan
+          </a>
+          <a href="#" target="_blank" class="shadow sponsors-links-donate" id="donate">
+            <i class="fas fa-dollar-sign"></i>
+            Donate
+          </a>
+        </div>
+        <div class="description">Those, who help us secure your privacy</div>
+      </section>
+
+      <footer>
+        <section id="links" class="footer-links">
+          <div class="footer-general-links">
+            <p class="contact-links">
+              General: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
+              Media: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
+              Security: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
+            </p>
+            <p class="support-links">
+              For support inquiries, please visit
+              <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
+            </p>
+          </div>
+          <div class="footer-company-links z-indexed">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading bold-text" id="en-footer-company-links"
+                onclick="isActiveFooter('footer-company-links')">
+                Company
+              </li>
+              <li class="footer-list-item"><a href="#">Blog</a></li>
+              <li class="footer-list-item"><a href="#">Team</a></li>
+              <li class="footer-list-item"><a href="#">Careers</a></li>
+              <li class="footer-list-item"><a href="https://www.neutronmail.com/support">Support</a></li>
+              <li class="footer-list-item"><a href="#donate">Donate</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="en-footer-legal-links"
+                onclick="isActiveFooter('footer-legal-links')">
+                Legal
+              </li>
+              <li class="footer-list-item"><a href="#">Imprint</a></li>
+              <li class="footer-list-item"><a href="#">Privacy Policy</a></li>
+              <li class="footer-list-item"><a href="#">Terms & Conditions</a></li>
+              <li class="footer-list-item"><a href="#">Transparency Report</a></li>
+              <li class="footer-list-item"><a href="#">Report Abuse</a></li>
+            </ul>
+          </div>
+          <div class="footer-neutronmail-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="en-footer-neutronmail-links"
+                onclick="isActiveFooter('footer-neutronmail-links')">
+                NeutronMail
+              </li>
+              <li class="footer-list-item"><a href="#">Pricing</a></li>
+              <li class="footer-list-item"><a href="#">Security</a></li>
+              <li class="footer-list-item"><a href="#">Shop</a></li>
+              <li class="footer-list-item"><a href="#">Press/Media Kit</a></li>
+              <li class="footer-list-item"><a href="#">Onion Site</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="#" target="_blank">Feedback Forum</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">© 2017 Neutron Technologies AG. All Rights Reserved.</div>
+      </footer>
+    </div>
+
+    <div class="fr" lang="fr">
+      <section id="face" class="face-block">
+        <div class="central-block">
+          <div class="face-headings">
+            <h2 class="main-heading">Communication sécurisée par courrier électronique</h2>
+            <h3 class="sub-heading">Basé dans <span class="colored-red">quelque part</span></h3>
+          </div>
+          <div class="face-block-buttons">
+            <div class="create-button shadow"><a href="#" target="_blank">Créer un compte</a></div>
+            <div class="apple-link round-button"><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
+            <div class="google-link round-button"><a href="#" target="_blank"><i class="fab fa-google-play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="social">
+          <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </section>
+
+      <section id="about" class="about-block">
+        <div class="left-block">
+          <i class="fas fa-shield-alt"></i>
+          <h3 class="main-heading">Confidentialité suisse</h3>
+          <h4 class="sub-heading">Sécurité des données et neutralité</h4>
+          <p class="desciption">
+            NeutronMail est intégré à Somewhere et tous nos serveurs sont situés en Suisse. Cela signifie tout
+            les données des utilisateurs sont protégées par les lois suisses sur la protection de la vie privée.
+          </p>
+        </div>
+        <div class="central-block">
+          <i class="fas fa-lock"></i>
+          <h3 class="main-heading">Double cryptage</h3>
+          <h4 class="sub-heading">Sécurité de messagerie automatique</h4>
+          <p class="desciption">
+            Tous les courriels sont sécurisés automatiquement avec un cryptage de bout en bout. Cela signifie que même
+            nous ne pouvons pas déchiffrer et lire vos emails. Par conséquent, vos courriels cryptés ne peuvent pas
+            être partagés avec des tiers.
+          </p>
+        </div>
+        <div class="right-block">
+          <i class="fas fa-key"></i>
+          <h3 class="main-heading">Email anonyme</h3>
+          <h4 class="sub-heading">Protéger votre vie privée</h4>
+          <p class="desciption">
+            Aucune information personnelle n'est requise pour créer votre compte de messagerie sécurisé.
+            Par défaut, nous ne gardons aucune adresse IP journaux pouvant être liés à votre compte de
+            messagerie anonyme. Votre vie privée vient en premier.
+          </p>
+        </div>
+      </section>
+
+      <section id="security" class="security-block">
+        <div class="central-block">
+          <h2 class="main-heading">Sécurité physique</h2>
+          <p class="description">
+            L’infrastructure de NeutronMail réside dans le centre de données
+            <span class="colored-red-red">le plus sécurisé</span> d’Europe, sous 1000 mètres de roche solide.
+          </p>
+        </div>
+        <a href="#" class="learn-more-button">
+          <span class="link-text">En savoir plus sur nos fonctionnalités de sécurité</span>
+        </a>
+        <div class="our-users-block">
+          <img class="our-users-image" src="assets/images/in_world.png">
+        </div>
+      </section>
+
+      <section id="download" class="download-block">
+        <div class="download-quote">
+          Un nouveau service de messagerie en cours de développement par un groupe
+          du MIT et du CERN promettent de mettre en sécurité,
+          email crypté aux masses et rester sensible
+          l'information à l'abri des regards indiscrets.
+          <br>
+          <span class="download-quote-name">— Boston Herald</span>
+        </div>
+        <div class="central-block">
+          <h2 class="download-heading">N'importe quel appareil, n'importe où</h2>
+          <div class="download-info">
+            La boîte de réception NeutronMail est optimisée pour la productivité.
+            Chaque détail de notre service de courrier électronique sécurisé est optimisé pour vous aider à mieux lire,
+            organiser et envoyer un email.
+          </div>
+          <div class="download-links">
+            <a class="download-appstore link" href="https://www.apple.com/ru/ios/app-store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download1.png" alt="Download on the App Store">
+            </a>
+            <a class="download-google link" href="https://play.google.com/store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download2.png" alt="Get it on Google Play">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsors" class="sponsors-block">
+        <h3 class="main-heading">La vie privée est un droit humain fondamental.</h3>
+        <h4 class="sub-heading">Votre soutien nous aide à protéger la vie privée dans le monde entier.</h4>
+        <div class="sponsors-links">
+          <a href="#" target="_blank" class="create-button shadow sponsors-links-upgrade">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Mise à niveau vers un plan payé
+          </a>
+          <a href="#" target="_blank" class="shadow sponsors-links-donate" id="donate">
+            <i class="fas fa-dollar-sign"></i>
+            Faire un don
+          </a>
+        </div>
+        <div class="description">Ceux qui nous aident à protéger votre vie privée</div>
+      </section>
+
+      <footer>
+        <section id="links" class="footer-links">
+          <div class="footer-general-links">
+            <p class="contact-links">
+              Général: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
+              Médias: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
+              Sécurité: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
+            </p>
+            <p class="support-links">
+              Pour toute demande d'assistance, veuillez visiter
+              <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
+            </p>
+          </div>
+          <div class="footer-company-links z-indexed">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading bold-text" id="fr-footer-company-links"
+                onclick="isActiveFooter('footer-company-links')">
+                Compagnie
+              </li>
+              <li class="footer-list-item"><a href="#">Blog</a></li>
+              <li class="footer-list-item"><a href="#">Équipe</a></li>
+              <li class="footer-list-item"><a href="#">Carrières</a></li>
+              <li class="footer-list-item"><a href="https://www.neutronmail.com/support">Soutien</a></li>
+              <li class="footer-list-item"><a href="#donate">Faire un don</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="fr-footer-legal-links"
+                onclick="isActiveFooter('footer-legal-links')">
+                Légal
+              </li>
+              <li class="footer-list-item"><a href="#">Imprimer</a></li>
+              <li class="footer-list-item"><a href="#">Politique de confidentialité</a></li>
+              <li class="footer-list-item"><a href="#">Termes et conditions</a></li>
+              <li class="footer-list-item"><a href="#">Rapport de transparence</a></li>
+              <li class="footer-list-item"><a href="#">Signaler un abus</a></li>
+            </ul>
+          </div>
+          <div class="footer-neutronmail-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="fr-footer-neutronmail-links"
+                onclick="isActiveFooter('footer-neutronmail-links')">
+                NeutronMail
+              </li>
+              <li class="footer-list-item"><a href="#">Prix</a></li>
+              <li class="footer-list-item"><a href="#">Sécurité</a></li>
+              <li class="footer-list-item"><a href="#">Magasin</a></li>
+              <li class="footer-list-item"><a href="#">Dossier de presse/média</a></li>
+              <li class="footer-list-item"><a href="#">Site d'oignon</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="#" target="_blank">Forum de commentaires</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">© 2017 Neutron Technologies AG. Tous les droits sont réservés.</div>
+      </footer>
+    </div>
+
+    <div class="it" lang="it">
+      <section id="face" class="face-block">
+        <div class="central-block">
+          <div class="face-headings">
+            <h2 class="main-heading">Comunicazione e-mail sicura</h2>
+            <h3 class="sub-heading">Con sede a <span class="colored-red">Da qualche parte</span></h3>
+          </div>
+          <div class="face-block-buttons">
+            <div class="create-button shadow"><a href="#" target="_blank">Creare un profilo</a></div>
+            <div class="apple-link round-button"><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
+            <div class="google-link round-button"><a href="#" target="_blank"><i class="fab fa-google-play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="social">
+          <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </section>
+
+      <section id="about" class="about-block">
+        <div class="left-block">
+          <i class="fas fa-shield-alt"></i>
+          <h3 class="main-heading">Privacy svizzera</h3>
+          <h4 class="sub-heading">Sicurezza e neutralità dei dati</h4>
+          <p class="desciption">
+            NeutronMail è incorporato in Somewhere e tutti i nostri server si trovano in Svizzera.
+            Questo significa tutto i dati dell'utente sono protetti dalle rigide leggi svizzere sulla privacy.
+          </p>
+        </div>
+        <div class="central-block">
+          <i class="fas fa-lock"></i>
+          <h3 class="main-heading">Doppia crittografia</h3>
+          <h4 class="sub-heading">Sicurezza e-mail automatica</h4>
+          <p class="desciption">
+            Tutte le e-mail sono protette automaticamente con la crittografia end-to-end. Questo significa che
+            nemmeno noi possiamo decifrare e leggere le tue email. Di conseguenza, le e-mail crittografate non
+            possono essere condivise con terze parti.
+          </p>
+        </div>
+        <div class="right-block">
+          <i class="fas fa-key"></i>
+          <h3 class="main-heading">Email anonima</h3>
+          <h4 class="sub-heading">Proteggi la tua privacy</h4>
+          <p class="desciption">
+            Non sono richieste informazioni personali per creare il tuo account e-mail sicuro. Per impostazione
+            predefinita, non manteniamo alcun IP registri che possono essere collegati al tuo account di posta
+            elettronica anonimo. La tua privacy viene prima di tutto.
+          </p>
+        </div>
+      </section>
+
+      <section id="security" class="security-block">
+        <div class="central-block">
+          <h2 class="main-heading">Sicurezza fisica</h2>
+          <p class="description">
+            L'infrastruttura di NeutronMail risiede nel centro dati <span class="coloured-red">più sicuro</span>
+            in Europa, sotto 1000 metri di roccia solida.
+          </p>
+        </div>
+        <a href="#" class="learn-more-button">
+          <span class="link-text">Ulteriori informazioni sulle nostre funzionalità di sicurezza</span>
+        </a>
+        <div class="our-users-block">
+          <img class="our-users-image" src="assets/images/in_world.png">
+        </div>
+      </section>
+
+      <section id="download" class="download-block">
+        <div class="download-quote">
+          Un nuovo servizio di posta elettronica sviluppato da un
+          gruppo dal MIT e dal CERN promette di garantire e-mail
+          crittografata per le masse e mantenere la sensibilità
+          informazioni lontane da occhi indiscreti.
+          <br>
+          <span class="download-quote-name">— Boston Herald</span>
+        </div>
+        <div class="central-block">
+          <h2 class="download-heading">Qualsiasi dispositivo, ovunque</h2>
+          <div class="download-info">
+            La casella di posta NeutronMail è ottimizzata per la produttività.
+            Ogni dettaglio all'interno del nostro servizio di posta elettronica sicuro è ottimizzato
+            per aiutarti a leggere meglio, organizzare e inviare e-mail.
+          </div>
+          <div class="download-links">
+            <a class="download-appstore link" href="https://www.apple.com/ru/ios/app-store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download1.png" alt="Download on the App Store">
+            </a>
+            <a class="download-google link" href="https://play.google.com/store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download2.png" alt="Get it on Google Play">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsors" class="sponsors-block">
+        <h3 class="main-heading">La privacy è un diritto umano fondamentale.</h3>
+        <h4 class="sub-heading">Il tuo supporto ci aiuta a proteggere la privacy in tutto il mondo.</h4>
+        <div class="sponsors-links">
+          <a href="#" target="_blank" class="create-button shadow sponsors-links-upgrade">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Passa al piano a pagamento
+          </a>
+          <a href="#" target="_blank" class="shadow sponsors-links-donate" id="donate">
+            <i class="fas fa-dollar-sign"></i>
+            Donare
+          </a>
+        </div>
+        <div class="description">Quelli che ci aiutano a proteggere la tua privacy</div>
+      </section>
+
+      <footer>
+        <section id="links" class="footer-links">
+          <div class="footer-general-links">
+            <p class="contact-links">
+              Generale: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
+              Media: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
+              Sicurezza: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
+            </p>
+            <p class="support-links">
+              Per richieste di supporto, visitare
+              <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
+            </p>
+          </div>
+          <div class="footer-company-links z-indexed">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading bold-text" id="it-footer-company-links"
+                onclick="isActiveFooter('footer-company-links')">
+                Azienda
+              </li>
+              <li class="footer-list-item"><a href="#">Blog</a></li>
+              <li class="footer-list-item"><a href="#">Squadra</a></li>
+              <li class="footer-list-item"><a href="#">Opportunità di lavoro</a></li>
+              <li class="footer-list-item"><a href="https://www.neutronmail.com/support">Supporto</a></li>
+              <li class="footer-list-item"><a href="#donate">Donare</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="it-footer-legal-links"
+                onclick="isActiveFooter('footer-legal-links')">
+                legale
+              </li>
+              <li class="footer-list-item"><a href="#">Impronta</a></li>
+              <li class="footer-list-item"><a href="#">politica sulla riservatezza</a></li>
+              <li class="footer-list-item"><a href="#">Termini & Condizioni</a></li>
+              <li class="footer-list-item"><a href="#">Rapporto sulla trasparenza</a></li>
+              <li class="footer-list-item"><a href="#">Segnala un abuso</a></li>
+            </ul>
+          </div>
+          <div class="footer-neutronmail-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="it-footer-neutronmail-links"
+                onclick="isActiveFooter('footer-neutronmail-links')">
+                NeutronMail
+              </li>
+              <li class="footer-list-item"><a href="#">Prezzi</a></li>
+              <li class="footer-list-item"><a href="#">Sicurezza</a></li>
+              <li class="footer-list-item"><a href="#">Negozio</a></li>
+              <li class="footer-list-item"><a href="#">Premere / Media Kit</a></li>
+              <li class="footer-list-item"><a href="#">Sito di cipolla</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="#" target="_blank">Forum di feedback</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">© 2017 Neutron Technologies AG. Tutti i diritti riservati.</div>
+      </footer>
+    </div>
+
+    <div class="pl" lang="pl">
+      <section id="face" class="face-block">
+        <div class="central-block">
+          <div class="face-headings">
+            <h2 class="main-heading">Bezpieczna komunikacja e-mail</h2>
+            <h3 class="sub-heading">Oparte na <span class="colored-red">Gdzieś</span></h3>
+          </div>
+          <div class="face-block-buttons">
+            <div class="create-button shadow"><a href="#" target="_blank">Utwórz konto</a></div>
+            <div class="apple-link round-button"><a href="#" target="_blank"><i class="fab fa-apple"></i></a></div>
+            <div class="google-link round-button"><a href="#" target="_blank"><i class="fab fa-google-play"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="social">
+          <a href="https://myaccount.google.com/" target="_blank"><i class="fab fa-google-plus-square"></i></a>
+          <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+          <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </div>
+      </section>
+
+      <section id="about" class="about-block">
+        <div class="left-block">
+          <i class="fas fa-shield-alt"></i>
+          <h3 class="main-heading">Prywatność w Szwajcarii</h3>
+          <h4 class="sub-heading">Bezpieczeństwo danych i neutralność</h4>
+          <p class="desciption">
+            NeutronMail jest zarejestrowany gdzieś, a wszyscy nasi pracownicy znajdują się w Szwajcarii.
+            Oznacza to wszystko dane użytkownika są chronione surowymi szwajcarskimi przepisami dotyczącymi
+            prywatności.
+          </p>
+        </div>
+        <div class="central-block">
+          <i class="fas fa-lock"></i>
+          <h3 class="main-heading">Podwójne szyfrowanie</h3>
+          <h4 class="sub-heading">Automatyczne zabezpieczenia poczty e-mail</h4>
+          <p class="desciption">
+            Wszystkie wiadomości e-mail są automatycznie zabezpieczane przy użyciu szyfrowania end-to-end.
+            Oznacza to, że nawet my nie możemy odszyfrować i odczytać twoje e-maile. W związku z tym
+            zaszyfrowanych wiadomości e-mail nie można udostępniać stronom trzecim.
+          </p>
+        </div>
+        <div class="right-block">
+          <i class="fas fa-key"></i>
+          <h3 class="main-heading">Anonimowy adres e-mail</h3>
+          <h4 class="sub-heading">Chroń swoją prywatność</h4>
+          <p class="desciption">
+            Żadne dane osobowe nie są wymagane do utworzenia bezpiecznego konta e-mail. Domyślnie nie
+            przechowujemy żadnych adresów IP logi, które można połączyć z Twoim anonimowym kontem e-mail.
+            Twoja prywatność jest najważniejsza.
+          </p>
+        </div>
+      </section>
+
+      <section id="security" class="security-block">
+        <div class="central-block">
+          <h2 class="main-heading">Bezpieczeństwo fizyczne</h2>
+          <p class="description">
+            Infrastruktura NeutronMail znajduje się w europejskim
+            <span class="colored-red">najbezpieczniejszym</span> centrum danych, pod 1000 metrów litej skały.
+          </p>
+        </div>
+        <a href="#" class="learn-more-button">
+          <span class="link-text">Dowiedz się więcej o naszych funkcjach bezpieczeństwa</span>
+        </a>
+        <div class="our-users-block">
+          <img class="our-users-image" src="assets/images/in_world.png">
+        </div>
+      </section>
+
+      <section id="download" class="download-block">
+        <div class="download-quote">
+          Nowa usługa e-mailowa opracowywana przez grupę
+          od MIT i CERN obiecuje zapewnić bezpieczeństwo,
+          zaszyfrowany e-mail do mas i zachowaj wrażliwość
+          informacje z dala od wścibskich oczu.
+          <br>
+          <span class="download-quote-name">— Boston Herald</span>
+        </div>
+        <div class="central-block">
+          <h2 class="download-heading">Dowolne urządzenie w dowolnym miejscu</h2>
+          <div class="download-info">
+            Skrzynka odbiorcza NeutronMail jest zoptymalizowana pod kątem wydajności.
+            Każdy szczegół w naszej bezpiecznej usłudze e-mail jest zoptymalizowany, aby pomóc Ci lepiej czytać,
+            organizować i wysyłać wiadomości e-mail.
+          </div>
+          <div class="download-links">
+            <a class="download-appstore link" href="https://www.apple.com/ru/ios/app-store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download1.png" alt="Download on the App Store">
+            </a>
+            <a class="download-google link" href="https://play.google.com/store/" target="_blank"
+              rel="noopener noreferrer">
+              <img class="link-image" src="assets/images/download2.png" alt="Get it on Google Play">
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sponsors" class="sponsors-block">
+        <h3 class="main-heading">Prywatność jest podstawowym prawem człowieka.</h3>
+        <h4 class="sub-heading">Twoje wsparcie pomaga nam chronić prywatność na całym świecie.</h4>
+        <div class="sponsors-links">
+          <a href="#" target="_blank" class="create-button shadow sponsors-links-upgrade">
+            <i class="fas fa-cloud-upload-alt"></i>
+            Uaktualnij do planu płatnego
+          </a>
+          <a href="#" target="_blank" class="shadow sponsors-links-donate" id="donate">
+            <i class="fas fa-dollar-sign"></i>
+            Podarować
+          </a>
+        </div>
+        <div class="description">Ci, którzy pomagają nam zabezpieczyć Twoją prywatność</div>
+      </section>
+
+      <footer>
+        <section id="links" class="footer-links">
+          <div class="footer-general-links">
+            <p class="contact-links">
+              Generał: <a href="mailto:contact@neutronmail.ch">contact@neutronmail.ch</a>
+              Głoska bezdźwięczna: <a href="mailto:media@neutronmail.ch">media@neutronmail.ch</a>
+              Bezpieczeństwo: <a href="mailto:security@neutronmail.ch">security@neutronmail.ch</a>
+            </p>
+            <p class="support-links">
+              Pytania dotyczące pomocy technicznej można znaleźć na stronie
+              <a href="https://www.neutronmail.com/support">neutronmail.com/support</a>
+            </p>
+          </div>
+          <div class="footer-company-links z-indexed">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading bold-text" id="pl-footer-company-links"
+                onclick="isActiveFooter('footer-company-links')">
+                Firma
+              </li>
+              <li class="footer-list-item"><a href="#">Blog</a></li>
+              <li class="footer-list-item"><a href="#">Zespół</a></li>
+              <li class="footer-list-item"><a href="#">Kariera</a></li>
+              <li class="footer-list-item"><a href="https://www.neutronmail.com/support">Wsparcie</a></li>
+              <li class="footer-list-item"><a href="#donate">Podarować</a></li>
+            </ul>
+          </div>
+          <div class="footer-legal-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="pl-footer-legal-links"
+                onclick="isActiveFooter('footer-legal-links')">
+                Prawny
+              </li>
+              <li class="footer-list-item"><a href="#">Odcisk</a></li>
+              <li class="footer-list-item"><a href="#">Polityka prywatności</a></li>
+              <li class="footer-list-item"><a href="#">Zasady i Warunki</a></li>
+              <li class="footer-list-item"><a href="#">Raport przejrzystości</a></li>
+              <li class="footer-list-item"><a href="#">Zgłoś nadużycie</a></li>
+            </ul>
+          </div>
+          <div class="footer-neutronmail-links">
+            <ul class="footer-links-list">
+              <li class="footer-list-item footer-list-heading" id="pl-footer-neutronmail-links"
+                onclick="isActiveFooter('footer-neutronmail-links')">
+                NeutronMail
+              </li>
+              <li class="footer-list-item"><a href="#">cennik</a></li>
+              <li class="footer-list-item"><a href="#">Bezpieczeństwo</a></li>
+              <li class="footer-list-item"><a href="#">Sklep</a></li>
+              <li class="footer-list-item"><a href="#">Naciśnij / Media Kit</a></li>
+              <li class="footer-list-item"><a href="#">Witryna z cebulą</a></li>
+            </ul>
+          </div>
+        </section>
+
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li class="footer-nav-item"><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://myaccount.google.com/" target="_blank">Google+</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="#" target="_blank">Forum opinii</a></li>
+            <li class="footer-nav-item"><span class="unselectable">/</span></li>
+            <li class="footer-nav-item"><a href="https://www.reddit.com/" target="_blank">Reddit</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">© 2017 Neutron Technologies AG. Wszelkie prawa zastrzeżone.</div>
+      </footer>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var body = document.getElementsByTagName('body')[0];
+      var switcherEN = document.getElementById('switcher-en');
+      var switcherFR = document.getElementById('switcher-fr');
+      var switcherIT = document.getElementById('switcher-it');
+      var switcherPL = document.getElementById('switcher-pl');
+
+      // titles
+      var titleEN = document.getElementById('title-en');
+      var titleFR = document.getElementById('title-fr');
+      var titleIT = document.getElementById('title-it');
+      var titlePL = document.getElementById('title-pl');
+      var title = {
+        en: titleEN.getAttribute('content'),
+        fr: titleFR.getAttribute('content'),
+        it: titleIT.getAttribute('content'),
+        pl: titlePL.getAttribute('content')
+      }
+
+      var switchLang = function () {
+        var lang = this.id
+        lang = lang.replace('switcher-', '');
+        body.className = lang;
+        document.title = title[lang];
+      }
+
+      switcherEN.onclick = switchLang;
+      switcherFR.onclick = switchLang;
+      switcherIT.onclick = switchLang;
+      switcherPL.onclick = switchLang;
+    })();
+  </script>
+</body>
+
+</html>

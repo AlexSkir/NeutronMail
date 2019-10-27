@@ -1,73 +1,94 @@
-body {
-    zoom:75%;
+.nav-button-menu .font-awesome-wrapper {
+  display: none;
 }
-.container {
-    position: absolute;
-    left: 50%;
-    right: -50%;
-    top: 195%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    width: 60%;
-    height: auto;
-    justify-content: center;
+.header {
+  justify-content: space-around;
 }
-.social {
-    right: -290px;
+.header-nav-langs {
+  margin-right: 0;
 }
-.first {
-    padding-left: 60px;
+.face-block {
+  height: 670px;
+  background-position-x: center;
+  background-size: cover;
 }
-.first, .second, .third {
-    left: 0;
+.about-block .central-block::before,
+.about-block .central-block::after,
+.security-block::after,
+.download-block::after,
+.footer-general-links::before,
+.footer-company-links::after,
+.footer-neutronmail-links::before,
+.footer-neutronmail-links::after {
+  content: none;
 }
-#about div:nth-child(4) {
-    left: -753px;        
+.about-block {
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 }
-#about div:nth-child(5) {
-    left: -381px;
+.left-block,
+.about-block .central-block,
+.right-block {
+  margin: 0 0 70px 0;
+  width: 730px;
+  text-align: center;
 }
-#about div:nth-child(6) {
-    left: 30px;
+.right-block {
+  margin: 0;
 }
-#security div:first-child {
-    left: 200px;
+.about-block .sub-heading {
+  font-size: 22px;
 }
-.learn {
-    left: 625px;
+.left-block .sub-heading {
+  padding-left: 106px;
 }
-#security .shape {
-    width: 625px;
+.about-block .desciption {
+  font-size: 20px;
 }
-#sponsors div:nth-of-type(3) {
-    width: 1000px;
+.security-block .central-block,
+.security-block .main-heading {
+  margin: 0;
+  text-align: center;
 }
-#sponsors p {
-    left: 1080px;
+.security-block .learn-more-button {
+  margin: 30px 0;
 }
-#sponsors img {
-    left: 410px;
+.security-block .our-users-block {
+  padding: 0;
 }
-#download h2 {
-    left: 608px;
+.download-block {
+  height: 700px;
 }
-#download p:nth-of-type(2) {
-    left: 557px;
+.download-block .central-block::after {
+  left: 348px;
+  bottom: -105px;
+  width: 360px;
+  height: 415px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-#download img:nth-of-type(1), #download img:nth-of-type(2) {
-    left: 590px;
+.sponsors-block .description {
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
 }
-#download img:nth-of-type(3) {
-    left: 430px;
+.sponsors-block .description::after {
+  top: 25px;
+  right: 0;
 }
-#links div:first-child {
-    padding-left: 145px;
+.footer-general-links,
+.footer-company-links {
+  margin-left: 10%;
 }
-#links div:last-of-type {
-    left: -430px;
+.footer-nav {
+  width: 500px;
+  height: auto;
+  font-size: 18px;
 }
-@-moz-document url-prefix() {
-    .container{
-        top: 250%;
-    }
+.footer-nav a {
+  font-size: 18px;
+}
+.copyright {
+  font-size: 16px;
 }

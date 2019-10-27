@@ -1,0 +1,70 @@
+.security-block .our-users-image,
+.sponsors-block .description,
+.sponsors-block .description::after {
+  width: 100%;
+}
+.nav-ancors-list {
+  display: none;
+}
+.header-nav-ancors {
+  width: auto;
+}
+.nav-button-menu .font-awesome-wrapper,
+.header-heading {
+  display: inline-block;
+}
+.face-headings .main-heading {
+  font-size: 48px;
+  text-align: center;
+}
+.sponsors-block .description::after {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.download-block .central-block::after {
+  content: none;
+}
+.download-block .central-block {
+  align-items: center;
+}
+.download-block .download-info {
+  text-align: center;
+}
+footer {
+  background: rgb(249, 249, 249);
+}
+.footer-links {
+  height: auto;
+  margin: 60px 0;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer-general-links {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+.footer-general-links .contact-links,
+.footer-general-links .support-links {
+  width: 340px;
+}
+.footer-company-links,
+.footer-legal-links,
+.footer-neutronmail-links {
+  margin: 0;
+}
+.footer-links .footer-company-links .footer-list-item {
+  width: 150px;
+}
+.footer-links .footer-list-item {
+  width: 230px;
+  font-size: 24px;
+}
+.footer-links .footer-list-item:not(.footer-list-heading)::before {
+  top: 14px;
+}
+.copyright {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
