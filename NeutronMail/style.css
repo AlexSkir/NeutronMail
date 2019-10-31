@@ -64,6 +64,9 @@
 body {
   font-family: "Titillium Web", "AdobeInvisFont", "MyriadPro-Regular", sans-serif;
 }
+.nav-button-menu .font-awesome-wrapper {
+  display: none;
+}
 .drop-down-ancors-block {
   width: 0;
   height: 0;
